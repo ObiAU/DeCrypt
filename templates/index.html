@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wallet Query</title>
+</head>
+<body>
+    <h1>Enter Wallet Details</h1>
+    <form action="http://127.0.0.1:5000/process_query" method="post">
+        <label for="wallet_address">Wallet Address:</label><br>
+        <input type="text" id="wallet_address" name="wallet_address"><br>
+
+        <!-- <label for="chain_name">Blockchain/Currency (ethereum, bitcoin):</label><br>
+        <input type="text" id="chain_name" name="chain_name"><br> -->
+
+        <label for="user_input">Query:</label><br>
+        <input type="text" id="user_input" name="user_input"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

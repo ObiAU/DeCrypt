@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  background-color: #165985; 
+  color: #e7e7e7; 
+}
+
+.App-logo {
+  height: 20vmin; 
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header {
+  background-color: rgba(255, 254, 254, 0.01);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+  color: #808080;
+}
+
+.App-link {
+  color: #61dafb; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #61dafb; 
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.query-input {
+  width: 700px;
+  /* max-width: 1000px; */
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.response-text {
+  font-size: 16px; 
+  color: white;
+}
+
