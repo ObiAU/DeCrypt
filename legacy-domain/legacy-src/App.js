@@ -107,6 +107,8 @@ function App() {
     setIsLoading(false);
   };
 
+  // can use JScript XML (HTML kind of syntax, chek documentation)
+
   return (
     <div className="App">
       <Cover />
