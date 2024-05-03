@@ -22,8 +22,11 @@ Price Change Analysis: Examine price fluctuations for individual and overall tok
 Holdings Analysis: Review current holdings and compare with 24-hour historical data.
 
 Technologies Used:
+
 Programming Languages: Python, TypeScript (React.js), HTML, CSS
+
 APIs: Covalent, OpenAI, Moralis, Deribit, Cryptocompare
+
 AI Model: Integrated GPT-3.5 Turbo for enhanced interactivity
 
 More features to come!
