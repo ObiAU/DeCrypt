@@ -1,19 +1,33 @@
 from openai import OpenAI, AsyncOpenAI
 from config import OPENAI_API_KEY
+from rag_config import VectorStore
 
-class Model:
+class Model(VectorStore):
     def __init__(self) -> None:
+        VectorStore.__init__(self)
         self.client = OpenAI(api_key=OPENAI_API_KEY)
+        self.ref = self.process_file()
 
     def get_completion(self, prompt, client_instance, model="gpt-3.5-turbo"):
+        # context = url = ''
+        id = self.retriever(prompt)[1]
+        context = self.ref[id]['text']
+        url = self.ref[id]['url']
+
+        sys = f"""You are a helpful assistant guiding the user through querying their cryptocurrency wallet. 
+            You give concise but helpful answers. If you are using bullet points in your response, limit them to three.
+            Take the users context and use it to increase your understanding of the cryptocurrency domain.
+            Think step by step. If you do not know the answer, then say you don't know.
+            For any context you've used to inform your response, ALWAYS provide the corresponding url as a helpful link for the user to refer to.
+
+            Context: {context}
+            Url: {url}
+            """
 
         messages = [
             {
             "role": "system", 
-            "content" : """You are a helpful assistant guiding the user through querying their cryptocurrency wallet. 
-            You give concise but helpful answers. If you are using bullet points in your response, limit them to three.
-            Think step by step. If you do not know the answer, then say you don't know.
-            """
+            "content" : sys
             }
             ,
             {
