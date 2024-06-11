@@ -4,3 +4,4 @@ node_modules/
 .cache/
 build/
 config.py
+main.py
