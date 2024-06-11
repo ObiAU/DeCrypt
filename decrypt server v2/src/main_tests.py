@@ -1,14 +1,10 @@
 from tokenomics import Tokenomics
-
-from openai import OpenAI
-from config import OPENAI_API_KEY
 from command import Commander
+from models import Model
 
-class Maintenance:
+class Maintenance(Commander, Model, Tokenomics):
     def __init__(self) -> None:
-        self.client = OpenAI()
-        self.token = Tokenomics()
-        self.cmd = Commander()
+        super().__init__()
 
     def main(self):
         wallet_address = input("Enter your wallet address: ").replace('"', '').strip()
@@ -34,7 +30,7 @@ class Maintenance:
                 # ticker, start_date, end_date, = None, None, None
 
                 messages.append({"role": "user", "content": user_input})
-                command_response = self.cmd.check_for_command(user_input, wallet_address)
+                command_response = self.check_for_command(user_input, wallet_address)
 
                 if command_response:
                     print(command_response)
@@ -47,7 +43,7 @@ class Maintenance:
 
                     prompt = " ".join([msg['content'] for msg in messages])
                     # print("Final prompt being sent:", prompt)  
-                    gpt_response = self.token.get_completion(prompt, self.client)
+                    gpt_response = self.get_completion(prompt, self.client)
                     print(gpt_response)
                     messages.append({"role": "assistant", "content": gpt_response})
 
