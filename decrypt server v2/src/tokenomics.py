@@ -1,18 +1,13 @@
 from utility import Utils, Extracts
-from openai import OpenAI, AsyncOpenAI
 import requests
 import pandas as pd
 import numpy as np
 from cryptocmd import CmcScraper
 from cryptocompy import price
 from models import Prompters
+from config import COVALENT_API_KEY, COVALENT_ENDPOINT
 
-import re
-from config import OPENAI_API_KEY, COVALENT_API_KEY, COVALENT_ENDPOINT
-
-OpenAI.api_key = OPENAI_API_KEY
-
-class Tokenomics(Utils):
+class Tokenomics(Utils, Extracts):
     def __init__(self) -> None:
         super().__init__()
 
