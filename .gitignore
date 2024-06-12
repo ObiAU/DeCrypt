@@ -13,7 +13,7 @@ main.py
 # dependencies
 /.pnp
 .pnp.js
-# __pycache__
+# /DECRYPT_V2/__pycache__/
 # testing
 /coverage
 
