@@ -19,7 +19,8 @@ main.py
 
 # production
 /build
-/im-dir/
+# /DECRYPT_V2/im_dir/
+/im_dir/
 
 # misc
 .DS_Store
