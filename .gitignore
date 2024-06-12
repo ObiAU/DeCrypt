@@ -3,5 +3,36 @@ node_modules/
 .DS_Store
 .cache/
 build/
+
+# secrets
 config.py
+/decrypt_server_v2/src/data_store/
 main.py
+
+
+# dependencies
+/.pnp
+.pnp.js
+__pycache__
+# testing
+/coverage
+
+# production
+/build
+/im-dir/
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# README.Docker.md
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/decrypt_domain_v2/public
+# /decrypt_domain_v2/package.json
+# /decrypt_domain_v2/tsconfig.json
+
