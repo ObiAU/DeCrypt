@@ -30,3 +30,9 @@ APIs: Covalent, OpenAI, Moralis, Deribit, Cryptocompare
 AI Model: Integrated GPT-3.5 Turbo for enhanced interactivity
 
 More features to come!
+
+# Project Structure
+
+- '/decrypt_domain_v2' - Contains all frontend components - UI components, routers and static assets.
+- '/decrypt_server_v2' - Contains all backend modules, project setup configs, and the flask app.
+- `/docker` - Contains all Docker-related files including Dockerfile, docker-compose for local setup, and Docker-specific instructions.
