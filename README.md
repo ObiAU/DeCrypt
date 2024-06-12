@@ -1,6 +1,6 @@
 # DeCrypt Functionality
 
-DeCrypt is a cryptocurrency analysis and consultancy tool developed using Python, TypeScript and Reactjs. It uses OpenAI, Covalent, CryptoCompare and Moralis APIs primarily for analytics, and Chakra UI for interface design.
+DeCrypt is a cryptocurrency analysis and consultancy tool developed with Python, TypeScript and Reactjs. The platform features an custom-built RAG semantic search using cosine similarity for enhanced crypto domain knowledge, and uses OpenAI, Covalent, CryptoCompare and Moralis APIs primarily for analytics, and Chakra UI for interface design. 
 
 Designed for cryptocurrency enthusiasts, DeCrypt offers real-time financial analytics and decision support.
 
