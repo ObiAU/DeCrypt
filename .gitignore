@@ -13,7 +13,7 @@ main.py
 # dependencies
 /.pnp
 .pnp.js
-__pycache__
+# __pycache__
 # testing
 /coverage
 
